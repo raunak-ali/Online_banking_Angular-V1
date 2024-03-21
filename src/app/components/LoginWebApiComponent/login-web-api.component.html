@@ -1,0 +1,16 @@
+<p>login-web-api works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="accountNumber">Account Number:</label>
+    <input type="text" formControlName="accountNumber" id="accountNumber" />
+    <div *ngIf="loginForm.get('accountNumber')?.errors?.['required']">Account Number is required.</div>
+  </div>
+  <div>
+    <label for="loginPassword">Password:</label>
+    <input type="password" formControlName="loginPassword" id="loginPassword" />
+    <div *ngIf="loginForm.get('loginPassword')?.errors?.['required']">Password is required.</div>
+  </div>
+  <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
+<div *ngIf="jwtToken">{{ jwtToken }}</div>
+<div *ngIf="error">{{ error }}</div>

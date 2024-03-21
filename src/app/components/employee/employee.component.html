@@ -1,0 +1,26 @@
+<p>employee works!</p>
+<p *ngIf="employee.length==0">Employee array is empty</p>
+<table border=1 *ngIf="employee.length>0">
+  <thead>
+  <tr>
+  <th>Code</th>
+  <th>Name</th>
+  <th>Gender</th>
+  <th>Annual Salary</th>
+  <th>Date of Birth</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let emp of employee">
+  <td> {{emp.code}}</td>
+  <td>{{emp.name}}</td>
+  <td>{{emp.gender}}</td>
+  <td>{{emp.annualSalary}}</td>
+  <td>{{emp.dateofBirth}}</td>
+  </tr>
+  <tr >
+  <td colspan="5">
+  </td>
+  </tr>
+  </tbody>
+  </table>
