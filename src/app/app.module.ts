@@ -14,6 +14,7 @@ import { TempComponent } from './components/temp/temp.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './components/user/user.component';
 import { LoginService } from './Services/Login.service';
+import { OpenAccountComponent } from './components/open-account/open-account.component';
 
 
 
@@ -27,7 +28,8 @@ import { LoginService } from './Services/Login.service';
     LoginWebApiComponent,
     LoginaspComponent,
     TempComponent,
-    UserComponent
+    UserComponent,
+    OpenAccountComponent
   ],
   imports: [
     BrowserModule,

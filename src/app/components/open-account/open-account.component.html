@@ -1,0 +1,209 @@
+<p>open-account works!</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form [formGroup]="accountProfileForm" (ngSubmit)="onSubmit()" class="mt-4">
+        <!-- Title -->
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" id="title" formControlName="Title" class="form-control" />
+          <div *ngIf="accountProfileForm.get('Title')?.errors?.['required']" class="text-danger">Title is required.</div>
+
+        </div>
+
+        <!-- First Name -->
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" formControlName="First_name" class="form-control" />
+          <div *ngIf="accountProfileForm.get('First_name')?.errors?.['required']" class="text-danger">First Name is required.</div>
+
+        </div>
+
+        <!-- Middle Name -->
+        <div class="form-group">
+          <label for="middleName">Middle Name:</label>
+          <input type="text" id="middleName" formControlName="Middle_name" class="form-control" />
+          <div *ngIf="accountProfileForm.get('Middle_name')?.errors?.['required']" class="text-danger">Middle Name is required.</div>
+
+        </div>
+
+        <!-- Last Name -->
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" formControlName="Last_name" class="form-control" />
+          <div *ngIf="accountProfileForm.get('Last_name')?.errors?.['required']" class="text-danger">Last Name is required.</div>
+
+        </div>
+
+        <!-- Father Name -->
+        <div class="form-group">
+          <label for="fatherName">Father Name:</label>
+          <input type="text" id="fatherName" formControlName="Father_name" class="form-control" />
+          <div *ngIf="accountProfileForm.get('Father_name')?.errors?.['required']" class="text-danger">Fathers Name is required.</div>
+
+        </div>
+
+        <!-- Mobile Number -->
+        <div class="form-group">
+          <label for="mobileNumber">Mobile Number:</label>
+          <input type="text" id="mobileNumber" formControlName="Mobilenumber" class="form-control" />
+          <div *ngIf="accountProfileForm.get('Mobilenumber')?.errors?.['required']" class="text-danger">Mobile Number is required.</div>
+
+        </div>
+
+        <!-- Email ID -->
+        <div class="form-group">
+          <label for="email">Email ID:</label>
+          <input type="email" id="email" formControlName="Email_id" class="form-control" />
+          <div *ngIf="accountProfileForm.get('Email_id')?.errors?.['required']" class="text-danger">Email id is required.</div>
+
+        </div>
+
+        <!-- Aadhar Number -->
+        <div class="form-group">
+          <label for="aadharNumber">Aadhar Number:</label>
+          <input type="text" id="aadharNumber" formControlName="Aadharnumber" class="form-control" />
+          <div *ngIf="accountProfileForm.get('Aadharnumber')?.errors?.['required']" class="text-danger">Aadhar Number is required.</div>
+
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" formControlName="DataOfBirth" class="form-control" />
+          <div *ngIf="accountProfileForm.get('DataOfBirth')?.errors?.['required']" class="text-danger">Date of Birth is required.</div>
+
+        </div>
+
+
+
+        <!-- Permanent Address -->
+        <div formGroupName="PermanantAddress">
+          <h3>Permanent Address</h3>
+          <!-- Address Line 1 -->
+          <div class="form-group">
+            <label for="permanentAddressLine1">Address Line 1:</label>
+            <input type="text" id="permanentAddressLine1" formControlName="AddressLine1" class="form-control" />
+            <div *ngIf="accountProfileForm.get('AddressLine1')?.errors?.['required']" class="text-danger">Address Lines are required.</div>
+
+          </div>
+          <!-- Address Line 2 -->
+          <div class="form-group">
+            <label for="permanentAddressLine2">Address Line 2:</label>
+            <input type="text" id="permanentAddressLine2" formControlName="AddressLine2" class="form-control" />
+            <div *ngIf="accountProfileForm.get('AddressLine2')?.errors?.['required']" class="text-danger">Address Lines are required.</div>
+
+          </div>
+          <!-- Landmark -->
+          <div class="form-group">
+            <label for="permanentAddressLandmark">Landmark:</label>
+            <input type="text" id="permanentAddressLandmark" formControlName="Landmark" class="form-control" />
+            <div *ngIf="accountProfileForm.get('Landmark')?.errors?.['required']" class="text-danger">Landmark is required.</div>
+
+          </div>
+          <!-- State -->
+          <div class="form-group">
+            <label for="permanentAddressState">State:</label>
+            <input type="text" id="permanentAddressState" formControlName="State" class="form-control" />
+            <div *ngIf="accountProfileForm.get('State')?.errors?.['required']" class="text-danger">State is required.</div>
+
+          </div>
+          <!-- City -->
+          <div class="form-group">
+            <label for="permanentAddressCity">City:</label>
+            <input type="text" id="permanentAddressCity" formControlName="City" class="form-control" />
+            <div *ngIf="accountProfileForm.get('City')?.errors?.['required']" class="text-danger">City is required.</div>
+
+          </div>
+          <!-- Pincode -->
+          <div class="form-group">
+            <label for="permanentAddressPincode">Pincode:</label>
+            <input type="text" id="permanentAddressPincode" formControlName="Pincode" class="form-control" />
+            <div *ngIf="accountProfileForm.get('Pincode')?.errors?.['required']" class="text-danger">Pincode is required.</div>
+
+          </div>
+
+          <div class="form-group form-check">
+            <input type="checkbox" formControlName="IsMailingAddress" id="permanentAddressIsMailing" class="form-check-input" />
+            <label for="permanentAddressIsMailing" class="form-check-label">Is Mailing Address</label>
+          </div>
+        </div>
+
+        <!-- Residential Address -->
+        <div formGroupName="ResidentialAddress">
+          <h3>Residential Address</h3>
+          <!-- Address Line 1 -->
+          <div class="form-group">
+            <label for="residentialAddressLine1">Address Line 1:</label>
+            <input type="text" id="residentialAddressLine1" formControlName="AddressLine1" class="form-control" />
+            <div *ngIf="accountProfileForm.get('AddressLine1')?.errors?.['required']" class="text-danger">Address Lines are required.</div>
+
+          </div>
+<!-- Address Line 2 -->
+<div class="form-group">
+  <label for="residentialAddressLine2">Address Line 2:</label>
+  <input type="text" id="residentialAddressLine2" formControlName="AddressLine2" class="form-control" />
+</div>
+<!-- Landmark -->
+<div class="form-group">
+  <label for="residentialAddressLandmark">Landmark:</label>
+  <input type="text" id="residentialAddressLandmark" formControlName="Landmark" class="form-control" />
+</div>
+<!-- State -->
+<div class="form-group">
+  <label for="residentialAddressState">State:</label>
+  <input type="text" id="residentialAddressState" formControlName="State" class="form-control" />
+</div>
+<!-- City -->
+<div class="form-group">
+  <label for="residentialAddressCity">City:</label>
+  <input type="text" id="residentialAddressCity" formControlName="City" class="form-control" />
+</div>
+<!-- Pincode -->
+<div class="form-group">
+  <label for="residentialAddressPincode">Pincode:</label>
+  <input type="text" id="residentialAddressPincode" formControlName="Pincode" class="form-control" />
+</div>
+
+
+</div>
+
+<!-- Occupation Type -->
+<div class="form-group">
+  <label for="occupationType">Occupation Type:</label>
+  <input type="text" id="occupationType" formControlName="OccupationType" class="form-control" />
+</div>
+
+<!-- Source of Income -->
+<div class="form-group">
+  <label for="sourceOfIncome">Source of Income:</label>
+  <input type="text" id="sourceOfIncome" formControlName="SourceOfIncome" class="form-control" />
+</div>
+
+<!-- Gross Annual Income -->
+<div class="form-group">
+  <label for="grossAnnualIncome">Gross Annual Income:</label>
+  <input type="text" id="grossAnnualIncome" formControlName="GrossAnnualIncome" class="form-control" />
+</div>
+
+<!-- Opted For Debit Card -->
+<div class="form-group form-check">
+  <input type="checkbox" id="optedForDebitCard" formControlName="OptedForDebitCard" class="form-check-input" />
+  <label for="optedForDebitCard" class="form-check-label">Opted For Debit Card</label>
+</div>
+
+<!-- Opted For Net Banking -->
+<div class="form-group form-check">
+  <input type="checkbox" id="optedForNetBanking" formControlName="OptedForNetBanking" class="form-check-input" />
+  <label for="optedForNetBanking" class="form-check-label">Opted For Net Banking</label>
+</div>
+
+  <div>
+    <label for="ValidationDocs">Upload Validation Document:</label>
+    <input type="file" (change)="onFileChange($event)" accept=".pdf,.doc,.docx" formControlName="ValidationDocs" id="ValidationDocs" class="ValidationDocs"/>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+</div>
+</div>
+</div>

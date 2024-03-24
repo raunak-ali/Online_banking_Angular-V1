@@ -6,6 +6,8 @@ import { LoginWebApiComponent } from './components/LoginWebApiComponent/login-we
 import { LoginaspComponent } from './components/loginasp/loginasp.component';
 import { TempComponent } from './components/temp/temp.component';
 import { UserComponent } from './components/user/user.component';
+import { HomeComponent } from './components/home/home.component';
+import { OpenAccountComponent } from './components/open-account/open-account.component';
 
 const routes: Routes = [
 {
@@ -29,7 +31,11 @@ component:EmployeeComponent},
 {
   path:"WebApi",
   component:LoginWebApiComponent
-}
+},
+{path:"Home",
+component:HomeComponent},
+{path:"OpenAccount",
+component:OpenAccountComponent}
 
 
 ];
