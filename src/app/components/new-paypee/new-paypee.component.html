@@ -1,0 +1,39 @@
+<p>new-paypee works!</p>
+<p>NEW PAYPEE</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 mt-5">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Add New Paypee</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="paypeeform" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="PaypeeIdAccountNumber">PaypeeIdAccountNumber Name:</label>
+              <input type="text" id="PaypeeIdAccountNumber" class="form-control" formControlName="PaypeeIdAccountNumber" required>
+            </div>
+
+            <div class="form-group">
+              <label for="PaypeeName">Paypee Name:</label>
+              <input type="text" id="PaypeeName" class="form-control" formControlName="PaypeeName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="AccountNumber">Account Number:</label>
+              <input type="text" id="AccountNumber" class="form-control" formControlName="AccountNumber" required>
+            </div>
+
+            <div class="form-group">
+              <label for="NickName">Nick Name:</label>
+              <input type="text" id="NickName" class="form-control" formControlName="NickName" required>
+            </div>
+
+            <!-- Add more form fields as needed -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

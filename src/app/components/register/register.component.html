@@ -1,0 +1,47 @@
+<p>register works!</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form [formGroup]="registerform" (ngSubmit)="onSubmit()" class="mt-4">
+        <!-- Account Number -->
+        <div class="form-group">
+          <label for="AccountNumber">Account Number:</label>
+          <input type="text" id="AccountNumber" formControlName="AccountNumber" class="form-control" />
+          <div *ngIf="registerform.get('AccountNumber')?.errors?.['required']" class="text-danger">Account Number is required.</div>
+        </div>
+
+        <!-- Login Password -->
+        <div class="form-group">
+          <label for="LoginPassword">Login Password:</label>
+          <input type="password" id="LoginPassword" formControlName="LoginPassword" class="form-control" />
+          <div *ngIf="registerform.get('LoginPassword')?.errors?.['required']" class="text-danger">Login Password is required.</div>
+        </div>
+
+        <!-- Confirm Login Password -->
+        <div class="form-group">
+          <label for="ConfirmLoginPassword">ConfirmLoginPassword:</label>
+          <input type="password" id="ConfirmLoginPassword" formControlName="ConfirmLoginPassword" class="form-control" />
+          <div *ngIf="registerform.get('ConfirmLoginPassword')?.errors?.['required']" class="text-danger">ConfirmLoginPassword is required.</div>
+        </div>
+        <!-- No need for ConfirmLoginPassword field as it's removed onSubmit() -->
+
+        <!-- Transaction Password -->
+        <div class="form-group">
+          <label for="TransactionPassword">Transaction Password:</label>
+          <input type="password" id="TransactionPassword" formControlName="TransactionPassword" class="form-control" />
+          <div *ngIf="registerform.get('TransactionPassword')?.errors?.['required']" class="text-danger">Transaction Password is required.</div>
+        </div>
+
+        <!-- Confirm Transaction Password -->
+        <div class="form-group">
+          <label for="ConfirmTransactionPassword">ConfirmTransactionPassword:</label>
+          <input type="password" id="ConfirmTransactionPassword" formControlName="ConfirmTransactionPassword" class="form-control" />
+          <div *ngIf="registerform.get('ConfirmTransactionPassword')?.errors?.['required']" class="text-danger">ConfirmTransactionPassword is required.</div>
+        </div>
+        <!-- No need for ConfirmTransactionPassword field as it's removed onSubmit() -->
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

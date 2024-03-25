@@ -8,6 +8,9 @@ import { TempComponent } from './components/temp/temp.component';
 import { UserComponent } from './components/user/user.component';
 import { HomeComponent } from './components/home/home.component';
 import { OpenAccountComponent } from './components/open-account/open-account.component';
+import { RegisterComponent } from './components/register/register.component';
+import { NewTransactionsComponent } from './components/new-transactions/new-transactions.component';
+import { NewPaypeeComponent } from './components/new-paypee/new-paypee.component';
 
 const routes: Routes = [
 {
@@ -35,7 +38,19 @@ component:EmployeeComponent},
 {path:"Home",
 component:HomeComponent},
 {path:"OpenAccount",
-component:OpenAccountComponent}
+component:OpenAccountComponent},
+{
+  path:"Register",
+  component:RegisterComponent
+},
+{
+  path:"NewTransaction",
+  component:NewTransactionsComponent
+},
+{
+  path:"NewPaypee",
+  component:NewPaypeeComponent
+}
 
 
 ];
